@@ -19,9 +19,29 @@ echo json_encode($lista);*/
 $search = Usuario::search("i");
 echo json_encode($search);*/
 
-//Carregar usuários usando login e senha
+/*//Carregar usuários usando login e senha
 $usuario = new Usuario();
 $usuario->login("Ademir", "Ademir22");
+
+echo $usuario;*/
+
+
+/*Criando novo usuário
+$aluno = new Usuario();
+
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+
+$aluno->insert();
+
+echo $aluno;*/
+
+
+$usuario = new Usuario();
+
+$usuario->loadById(2);
+
+$usuario->update("Professor", "@d3m1r");
 
 echo $usuario;
 
